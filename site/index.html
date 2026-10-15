@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>İAOSB Nedim Uysal MTAL Haber Takip</title>
+  <meta name="description" content="Özel İAOSB Nedim Uysal Mesleki ve Teknik Anadolu Lisesi haber ve duyurularını otomatik takip eden pano.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <h1>Haber Takip</h1>
+      <p class="sub">Özel İAOSB Nedim Uysal MTAL haber ve duyuruları</p>
+      <p id="updated" class="updated" aria-live="polite"></p>
+    </div>
+  </header>
+
+  <div id="stale" class="stale" hidden>Veriler güncel olmayabilir: son başarılı güncelleme çok eski.</div>
+
+  <main class="wrap">
+    <div class="controls">
+      <div class="tabs" role="tablist" aria-label="Kategori">
+        <button role="tab" class="tab" data-tab="tumu" aria-selected="true">Tümü</button>
+        <button role="tab" class="tab" data-tab="haber" aria-selected="false">Haberler</button>
+        <button role="tab" class="tab" data-tab="duyuru" aria-selected="false">Duyurular</button>
+      </div>
+      <input id="q" type="search" placeholder="Ara… (örn. erasmus, universite)" aria-label="Haber ve duyurularda ara" autocomplete="off">
+    </div>
+    <p id="count" class="count" aria-live="polite"></p>
+    <div id="list" class="grid"></div>
+    <p id="empty" class="empty" hidden>Aramanızla eşleşen kayıt bulunamadı.</p>
+    <p id="error" class="empty" hidden>Veriler yüklenemedi. Lütfen daha sonra tekrar deneyin.</p>
+  </main>
+
+  <footer class="wrap foot">
+    İçerikler <a href="https://www.iaosbnedimuysalatl.k12.tr" rel="noopener noreferrer">okulun resmi sitesinden</a> otomatik olarak derlenir; her kayıt orijinal sayfasına bağlanır.
+    Bu site okulla bağlantılı resmi bir site değildir.
+  </footer>
+
+  <dialog id="detail" class="detail" aria-labelledby="d-title">
+    <form method="dialog"><button class="close" aria-label="Kapat">×</button></form>
+    <div class="d-body">
+      <p id="d-meta" class="meta"></p>
+      <h2 id="d-title"></h2>
+      <div id="d-text" class="d-text"></div>
+      <div id="d-files" class="files"></div>
+      <div id="d-gallery" class="gallery"></div>
+      <p><a id="d-orig" class="orig" target="_blank" rel="noopener noreferrer">Orijinal sayfada aç ↗</a></p>
+    </div>
+  </dialog>
+
+  <dialog id="lightbox" class="lightbox">
+    <form method="dialog"><button class="close" aria-label="Kapat">×</button></form>
+    <img id="lb-img" alt="">
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

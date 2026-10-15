@@ -106,3 +106,20 @@ test('createFetcher: User-Agent başlığı gönderilir', async () => {
   await createFetcher({ delayMs: 0 })('https://x.test/');
   assert.match(ua, /^iaosb-haber-takip\/1\.0/);
 });
+
+test('ilk çalıştırmada firstSeenAt yayın tarihine eşitlenir (hepsi YENİ olmasın)', async () => {
+  const s = makeStore();
+  await run({ fetchHtml: makeSite().fetchHtml, ...s, now: NOW });
+  for (const it of s.store.items) assert.equal(it.firstSeenAt, `${it.date}T00:00:00.000Z`);
+});
+
+test('sonraki çalıştırmada yeni kaydın firstSeenAt değeri now olur', async () => {
+  const first = makeStore();
+  await run({ fetchHtml: makeSite().fetchHtml, ...first, now: NOW });
+  const trimmed = first.store.items.filter((i) => i.id !== 'haberler/gencler-iklim-degisikligiyle-mucadele-icin-bulustu');
+  const later = new Date(NOW.getTime() + 3600000);
+  const s = makeStore(trimmed);
+  await run({ fetchHtml: makeSite().fetchHtml, ...s, now: later });
+  const added = s.store.items.find((i) => i.id === 'haberler/gencler-iklim-degisikligiyle-mucadele-icin-bulustu');
+  assert.equal(added.firstSeenAt, later.toISOString());
+});

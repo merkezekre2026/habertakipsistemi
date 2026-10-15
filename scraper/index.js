@@ -43,7 +43,11 @@ export async function run({ fetchHtml, readItems, writeItems, writeStatus, now, 
     }
   }
 
-  const merged = mergeItems(existing, entries, details, now);
+  let merged = mergeItems(existing, entries, details, now);
+  if (existing.length === 0) {
+    // İlk yükleme: geçmiş kayıtlar "YENİ" sayılmasın, yayın tarihi baz alınır.
+    merged = merged.map((i) => ({ ...i, firstSeenAt: `${i.date}T00:00:00.000Z` }));
+  }
   const changed = JSON.stringify(merged) !== JSON.stringify(existing);
   if (changed) await writeItems(merged);
   await writeStatus({ lastSuccessAt: now.toISOString() });
