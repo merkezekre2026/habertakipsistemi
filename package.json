@@ -1,0 +1,15 @@
+{
+  "name": "iaosb-haber-takip",
+  "version": "1.0.0",
+  "private": true,
+  "description": "İAOSB Nedim Uysal MTAL haber ve duyuru takip panosu",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test test/",
+    "scrape": "node scraper/index.js"
+  },
+  "dependencies": {
+    "cheerio": "1.2.0"
+  }
+}
