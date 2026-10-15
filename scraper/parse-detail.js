@@ -11,9 +11,12 @@ export function makeExcerpt(text, max = 200) {
   return `${(lastSpace > 0 ? cut.slice(0, lastSpace) : cut).trimEnd()}…`;
 }
 
-function absolute(src, baseUrl) {
+function absolute(src, baseUrl, { sameHost = false } = {}) {
   try {
-    return new URL(src, baseUrl);
+    const u = new URL(src, baseUrl);
+    if (!/^https?:$/.test(u.protocol)) return null;
+    if (sameHost && u.host !== new URL(baseUrl).host) return null;
+    return u;
   } catch {
     return null;
   }
@@ -51,7 +54,7 @@ export function parseDetail(html, baseUrl) {
 
   const attachments = [];
   $article.find('a[href]').each((_, el) => {
-    const u = absolute($(el).attr('href'), baseUrl);
+    const u = absolute($(el).attr('href'), baseUrl, { sameHost: true });
     if (!u || !u.pathname.startsWith('/Uploads/') || !ATTACHMENT_EXT.test(u.pathname)) return;
     if (attachments.some((a) => a.url === u.href)) return;
     const name = $(el).text().replace(/\s+/g, ' ').trim() || decodeURIComponent(u.pathname.split('/').pop());

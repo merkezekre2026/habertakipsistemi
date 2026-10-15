@@ -15,8 +15,15 @@ export function parseList(html, baseUrl) {
     const $li = $(li);
     const href = $li.find('a.d_devami').attr('href');
     if (!href) return;
-    const url = new URL(href, baseUrl).href;
-    const id = new URL(url).pathname.replace(/^\/+/, '');
+    let u;
+    try {
+      u = new URL(href, baseUrl);
+    } catch {
+      return;
+    }
+    if (!/^https?:$/.test(u.protocol) || u.host !== new URL(baseUrl).host) return;
+    const url = u.href;
+    const id = u.pathname.replace(/^\/+/, '');
     const type = TYPES[id.split('/')[0]];
     if (!type) return;
     entries.push({

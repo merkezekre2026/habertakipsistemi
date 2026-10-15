@@ -21,6 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - uses: actions/setup-node@v4
         with:
@@ -43,6 +45,7 @@ jobs:
             echo "Veri değişmedi."
           else
             git commit -m "veri: yeni haberler"
+            git pull --rebase origin ${{ github.ref_name }}
             git push
           fi
 

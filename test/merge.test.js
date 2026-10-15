@@ -92,3 +92,11 @@ test('girdiler değiştirilmez', () => {
   mergeItems([old], [{ ...entry('a'), title: 'X' }], new Map(), NOW);
   assert.equal(JSON.stringify(old), snapshot);
 });
+
+test('içeriği dolu mevcut kaydın üzerine boş detay yazılmaz', () => {
+  const old = item('a', daysAgo(3));
+  const e = entry('a');
+  const [out] = mergeItems([old], [e], new Map([[e.id, empty]]), NOW);
+  assert.equal(out.text, 'metin');
+  assert.deepEqual(out.images, ['https://x.test/a.jpg']);
+});

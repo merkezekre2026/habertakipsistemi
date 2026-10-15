@@ -46,3 +46,10 @@ test('başlıktaki çift tırnak öğe metninden okunur', () => {
 test('boş HTML hata atmaz, 0 kayıt döner', () => {
   assert.deepEqual(parseList('<html></html>', BASE), { entries: [], totalPages: 1 });
 });
+
+test('javascript: ve dış host adresli kayıtlar atlanır', () => {
+  const li = (href) => `<ul class="duyurulari_listele"><li><div class="duyuru_adi">X</div><span class="duyuru_tarih">01.01.2026</span><a class="d_devami" href="${href}">d</a></li></ul>`;
+  assert.deepEqual(parseList(li('javascript:/haberler/x;alert(1)'), BASE).entries, []);
+  assert.deepEqual(parseList(li('https://evil.example/haberler/y'), BASE).entries, []);
+  assert.equal(parseList(li('/haberler/ok'), BASE).entries.length, 1);
+});

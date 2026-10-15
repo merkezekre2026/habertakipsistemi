@@ -19,7 +19,8 @@ export function mergeItems(existing, entries, details, now) {
     const detail = details.get(e.id);
     const prev = byId.get(e.id);
     if (prev) {
-      byId.set(e.id, { ...prev, ...e, ...(detail ?? {}) });
+      const useDetail = detail && !isEmptyContent(detail);
+      byId.set(e.id, { ...prev, ...e, ...(useDetail || isEmptyContent(prev) ? detail ?? {} : {}) });
     } else {
       byId.set(e.id, { ...e, ...(detail ?? EMPTY_DETAIL), firstSeenAt: now.toISOString() });
     }

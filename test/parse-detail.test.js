@@ -68,3 +68,14 @@ test('makeExcerpt: kısa metin aynen, uzun metin kelime sınırında kesilir', (
   assert.ok(ex.length <= 201);
   assert.ok(!ex.slice(0, -1).endsWith(' ') && /kelime…$/.test(ex));
 });
+
+test('data: görseller, javascript: ve dış host ekleri atlanır', () => {
+  const html = `<article><p>m
+    <img src="data:image/png;base64,AAAA"><img src="javascript:alert(1)"><img src="/Uploads/ok.jpg">
+    <a href="javascript:/Uploads/.source;alert(1)//x.pdf">js</a>
+    <a href="https://evil.example/Uploads/a.pdf">dis</a>
+    <a href="/Uploads/iyi.pdf">iyi</a></p></article>`;
+  const d = parseDetail(html, BASE);
+  assert.deepEqual(d.images, [`${U}ok.jpg`]);
+  assert.deepEqual(d.attachments, [{ name: 'iyi', url: `${U}iyi.pdf` }]);
+});
