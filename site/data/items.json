@@ -1,6 +1,25 @@
 {
   "items": [
     {
+      "id": "haberler/ogrencilerimiz-ankarayi-kesfetti",
+      "type": "haber",
+      "title": "Öğrencilerimiz Ankara’yı Keşfetti",
+      "date": "2026-11-10",
+      "url": "https://www.iaosbnedimuysalatl.k12.tr/haberler/ogrencilerimiz-ankarayi-kesfetti",
+      "text": "Okulumuz 11. Sınıf öğrencilerine yönelik Ankara gezisi düzenlendi.\n\nDüzenlenen etkinlikte; tarihi ve kültürel mirasıyla ülkemizin baş kenti olan Ankara’da gerçekleştirilen geziyle öğrencilerimiz Türkiye Cumhuriyeti’nin kuruluşuna uzanan tarihi süreci yerinde tanıma fırsatı buldu.\n\nGezi kapsamında Orta Doğu Teknik Üniversitesi (ÖDTÜ) Bilim ve Teknoloji Müzesi’ne ziyarette bulunan öğrencilerimiz müzeyi gezerken, geçmişten ve günümüze dayanan buluşlar, insanoğlunun geçirdiği evrimleşmeler hem teknolojik hem de arkeolojik değişimleri gözlemleme fırsatı buldular. Ayrıca gelecek üniversite tercihleri için birebir sorunlarını sorarak okul hakkında bilgi ve deneyim kazandılar.\n\nGazi Üniversitesi Rektörlük kampüsüne geçilerek, öğrencilerimiz için hazırlanan tanıtım programı etkinliğine katılım sağlandı. Söz konusu programda üniversitenin sağladığı imkanlarla yapılan projelerle öğrencilerimize tecrübeleri aktarıldı.\n\nÜniversite tanıtım ve gezileri sonrası 18 Ekim 1924 tarihinden 27 Mayıs 1960 yılına kadar Türkiye Büyük Millet Meclisi olarak kullanılan 2. Meclis binası ziyaret eden öğrenciler, Cumhuriyetimizin Kurucusu Gazi Mustafa Kemal Atatürk’ün Anıtkabir ziyareti gerçekleştirilerek, öğrencilerimizin yalnızca akademik alanda değil; tarihine, kültürüne ve değerlerine sahip çıkan, bilinçli ve donanımlı bireyler olarak yetişmelerini destekleten eğitim ve kültür faaliyetlerine önem veren okulumuz Etnografya Müzesi, Ankara Resim ve Heykel Müzesi ziyaretleri ile etkinliğimiz sona erdi.",
+      "excerpt": "Okulumuz 11. Sınıf öğrencilerine yönelik Ankara gezisi düzenlendi. Düzenlenen etkinlikte; tarihi ve kültürel mirasıyla ülkemizin baş kenti olan Ankara’da gerçekleştirilen geziyle öğrencilerimiz…",
+      "images": [
+        "https://www.iaosbnedimuysalatl.k12.tr/Uploads/img_0693.jpeg",
+        "https://www.iaosbnedimuysalatl.k12.tr/Uploads/ogrencilerimiz-ankarae28099yi-kesfetti.jpeg",
+        "https://www.iaosbnedimuysalatl.k12.tr/Uploads/img_0711.jpeg",
+        "https://www.iaosbnedimuysalatl.k12.tr/Uploads/photo-2026-11-10-12-25-01.jpg",
+        "https://www.iaosbnedimuysalatl.k12.tr/Uploads/img_0746.jpeg",
+        "https://www.iaosbnedimuysalatl.k12.tr/Uploads/img_0714.jpeg"
+      ],
+      "attachments": [],
+      "firstSeenAt": "2026-11-10T17:55:31.279Z"
+    },
+    {
       "id": "haberler/ogrencilerimiz-canakkale-tarihiyle-bulustu",
       "type": "haber",
       "title": "Öğrencilerimiz Çanakkale Tarihiyle Buluştu",
