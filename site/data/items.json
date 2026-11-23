@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "duyurular/1-donem-1-mazeret-sinav-programi-ortak-yazili-sinav-sistemi-dersleri",
+      "type": "duyuru",
+      "title": "1. Dönem 1. Mazeret Sınav Programı (Ortak Yazılı Sınav Sistemi Dersleri)",
+      "date": "2026-11-23",
+      "url": "https://www.iaosbnedimuysalatl.k12.tr/duyurular/1-donem-1-mazeret-sinav-programi-ortak-yazili-sinav-sistemi-dersleri",
+      "text": "",
+      "excerpt": "",
+      "images": [],
+      "attachments": [],
+      "firstSeenAt": "2026-11-23T14:49:32.069Z"
+    },
+    {
       "id": "haberler/okulumuzda-10-kasim-ataturku-anma-programi-gerceklestirildi",
       "type": "haber",
       "title": "Okulumuzda 10 Kasım Atatürk’ü Anma Programı Gerçekleştirildi",
