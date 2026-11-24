@@ -1,6 +1,35 @@
 {
   "items": [
     {
+      "id": "duyurular/2026-2027-egitim-ogretim-yili-aralik-ayi-veli-toplantisi-revize",
+      "type": "duyuru",
+      "title": "2026-2027 Eğitim Öğretim Yılı Aralık Ayı Veli Toplantısı**** Revize",
+      "date": "2026-11-24",
+      "url": "https://www.iaosbnedimuysalatl.k12.tr/duyurular/2026-2027-egitim-ogretim-yili-aralik-ayi-veli-toplantisi-revize",
+      "text": "",
+      "excerpt": "",
+      "images": [],
+      "attachments": [],
+      "firstSeenAt": "2026-11-24T12:40:03.452Z"
+    },
+    {
+      "id": "duyurular/1-donem-1-mazeret-sinav-programi-tum-dersler",
+      "type": "duyuru",
+      "title": "1. Dönem 1. Mazeret Sınav Programı (Tüm Dersler)",
+      "date": "2026-11-23",
+      "url": "https://www.iaosbnedimuysalatl.k12.tr/duyurular/1-donem-1-mazeret-sinav-programi-tum-dersler",
+      "text": "1. Dönem 1. Mazeret Sınav Programı için tıklayınız.",
+      "excerpt": "1. Dönem 1. Mazeret Sınav Programı için tıklayınız.",
+      "images": [],
+      "attachments": [
+        {
+          "name": "1. Dönem 1. Mazeret Sınav Programı için tıklayınız.",
+          "url": "https://www.iaosbnedimuysalatl.k12.tr/Uploads/mazeret-takvimi.pdf"
+        }
+      ],
+      "firstSeenAt": "2026-11-24T12:40:03.452Z"
+    },
+    {
       "id": "duyurular/1-donem-1-mazeret-sinav-programi-ortak-yazili-sinav-sistemi-dersleri",
       "type": "duyuru",
       "title": "1. Dönem 1. Mazeret Sınav Programı (Ortak Yazılı Sınav Sistemi Dersleri)",
